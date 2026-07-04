@@ -23,7 +23,8 @@ export const buildQueryPrismaHelper = (req) => {
   });
 
   const where = {
-    ...filters, 
+    ...filters,
+    isDelete: false,
   };
 
   return { page, pageSize, index, filters, where };

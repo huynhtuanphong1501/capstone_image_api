@@ -46,18 +46,22 @@ export const imgManageService = {
     },
 
     async deleteImgByImgId(req) {
-        const { imgId } = req.params;
+        const { id } = req.params;
         const checkImage = await prisma.hinh_anh.findUnique({
             where: {
-                hinh_id: Number(imgId),
+                hinh_id: Number(id),
             }
         });
         if (!checkImage) {
             throw new BadrequestError("Image not found");
         }
-        const deletedImage = await prisma.hinh_anh.delete({
+
+        const deletedImage = await prisma.hinh_anh.update({
             where: {
-                hinh_id: Number(imgId),
+                hinh_id: Number(id),
+            },
+            data: {
+                isDelete: true,
             }
         });
         return deletedImage;

@@ -2203,6 +2203,7 @@ export namespace Prisma {
     duong_dan: string | null
     mo_ta: string | null
     nguoi_dung_id: number | null
+    isDelete: boolean | null
   }
 
   export type Hinh_anhMaxAggregateOutputType = {
@@ -2211,6 +2212,7 @@ export namespace Prisma {
     duong_dan: string | null
     mo_ta: string | null
     nguoi_dung_id: number | null
+    isDelete: boolean | null
   }
 
   export type Hinh_anhCountAggregateOutputType = {
@@ -2219,6 +2221,7 @@ export namespace Prisma {
     duong_dan: number
     mo_ta: number
     nguoi_dung_id: number
+    isDelete: number
     _all: number
   }
 
@@ -2239,6 +2242,7 @@ export namespace Prisma {
     duong_dan?: true
     mo_ta?: true
     nguoi_dung_id?: true
+    isDelete?: true
   }
 
   export type Hinh_anhMaxAggregateInputType = {
@@ -2247,6 +2251,7 @@ export namespace Prisma {
     duong_dan?: true
     mo_ta?: true
     nguoi_dung_id?: true
+    isDelete?: true
   }
 
   export type Hinh_anhCountAggregateInputType = {
@@ -2255,6 +2260,7 @@ export namespace Prisma {
     duong_dan?: true
     mo_ta?: true
     nguoi_dung_id?: true
+    isDelete?: true
     _all?: true
   }
 
@@ -2350,6 +2356,7 @@ export namespace Prisma {
     duong_dan: string
     mo_ta: string | null
     nguoi_dung_id: number
+    isDelete: boolean | null
     _count: Hinh_anhCountAggregateOutputType | null
     _avg: Hinh_anhAvgAggregateOutputType | null
     _sum: Hinh_anhSumAggregateOutputType | null
@@ -2377,6 +2384,7 @@ export namespace Prisma {
     duong_dan?: boolean
     mo_ta?: boolean
     nguoi_dung_id?: boolean
+    isDelete?: boolean
     binh_luan?: boolean | hinh_anh$binh_luanArgs<ExtArgs>
     nguoi_dung?: boolean | nguoi_dungDefaultArgs<ExtArgs>
     luu_anh?: boolean | hinh_anh$luu_anhArgs<ExtArgs>
@@ -2391,9 +2399,10 @@ export namespace Prisma {
     duong_dan?: boolean
     mo_ta?: boolean
     nguoi_dung_id?: boolean
+    isDelete?: boolean
   }
 
-  export type hinh_anhOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"hinh_id" | "ten_hinh" | "duong_dan" | "mo_ta" | "nguoi_dung_id", ExtArgs["result"]["hinh_anh"]>
+  export type hinh_anhOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"hinh_id" | "ten_hinh" | "duong_dan" | "mo_ta" | "nguoi_dung_id" | "isDelete", ExtArgs["result"]["hinh_anh"]>
   export type hinh_anhInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     binh_luan?: boolean | hinh_anh$binh_luanArgs<ExtArgs>
     nguoi_dung?: boolean | nguoi_dungDefaultArgs<ExtArgs>
@@ -2414,6 +2423,7 @@ export namespace Prisma {
       duong_dan: string
       mo_ta: string | null
       nguoi_dung_id: number
+      isDelete: boolean | null
     }, ExtArgs["result"]["hinh_anh"]>
     composites: {}
   }
@@ -2791,6 +2801,7 @@ export namespace Prisma {
     readonly duong_dan: FieldRef<"hinh_anh", 'String'>
     readonly mo_ta: FieldRef<"hinh_anh", 'String'>
     readonly nguoi_dung_id: FieldRef<"hinh_anh", 'Int'>
+    readonly isDelete: FieldRef<"hinh_anh", 'Boolean'>
   }
     
 
@@ -5254,7 +5265,8 @@ export namespace Prisma {
     ten_hinh: 'ten_hinh',
     duong_dan: 'duong_dan',
     mo_ta: 'mo_ta',
-    nguoi_dung_id: 'nguoi_dung_id'
+    nguoi_dung_id: 'nguoi_dung_id',
+    isDelete: 'isDelete'
   };
 
   export type Hinh_anhScalarFieldEnum = (typeof Hinh_anhScalarFieldEnum)[keyof typeof Hinh_anhScalarFieldEnum]
@@ -5350,6 +5362,13 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Boolean'
+   */
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -5429,6 +5448,7 @@ export namespace Prisma {
     duong_dan?: StringFilter<"hinh_anh"> | string
     mo_ta?: StringNullableFilter<"hinh_anh"> | string | null
     nguoi_dung_id?: IntFilter<"hinh_anh"> | number
+    isDelete?: BoolNullableFilter<"hinh_anh"> | boolean | null
     binh_luan?: Binh_luanListRelationFilter
     nguoi_dung?: XOR<Nguoi_dungScalarRelationFilter, nguoi_dungWhereInput>
     luu_anh?: Luu_anhListRelationFilter
@@ -5440,6 +5460,7 @@ export namespace Prisma {
     duong_dan?: SortOrder
     mo_ta?: SortOrderInput | SortOrder
     nguoi_dung_id?: SortOrder
+    isDelete?: SortOrderInput | SortOrder
     binh_luan?: binh_luanOrderByRelationAggregateInput
     nguoi_dung?: nguoi_dungOrderByWithRelationInput
     luu_anh?: luu_anhOrderByRelationAggregateInput
@@ -5455,6 +5476,7 @@ export namespace Prisma {
     duong_dan?: StringFilter<"hinh_anh"> | string
     mo_ta?: StringNullableFilter<"hinh_anh"> | string | null
     nguoi_dung_id?: IntFilter<"hinh_anh"> | number
+    isDelete?: BoolNullableFilter<"hinh_anh"> | boolean | null
     binh_luan?: Binh_luanListRelationFilter
     nguoi_dung?: XOR<Nguoi_dungScalarRelationFilter, nguoi_dungWhereInput>
     luu_anh?: Luu_anhListRelationFilter
@@ -5466,6 +5488,7 @@ export namespace Prisma {
     duong_dan?: SortOrder
     mo_ta?: SortOrderInput | SortOrder
     nguoi_dung_id?: SortOrder
+    isDelete?: SortOrderInput | SortOrder
     _count?: hinh_anhCountOrderByAggregateInput
     _avg?: hinh_anhAvgOrderByAggregateInput
     _max?: hinh_anhMaxOrderByAggregateInput
@@ -5482,6 +5505,7 @@ export namespace Prisma {
     duong_dan?: StringWithAggregatesFilter<"hinh_anh"> | string
     mo_ta?: StringNullableWithAggregatesFilter<"hinh_anh"> | string | null
     nguoi_dung_id?: IntWithAggregatesFilter<"hinh_anh"> | number
+    isDelete?: BoolNullableWithAggregatesFilter<"hinh_anh"> | boolean | null
   }
 
   export type luu_anhWhereInput = {
@@ -5659,6 +5683,7 @@ export namespace Prisma {
     ten_hinh: string
     duong_dan: string
     mo_ta?: string | null
+    isDelete?: boolean | null
     binh_luan?: binh_luanCreateNestedManyWithoutHinh_anhInput
     nguoi_dung: nguoi_dungCreateNestedOneWithoutHinh_anhInput
     luu_anh?: luu_anhCreateNestedManyWithoutHinh_anhInput
@@ -5670,6 +5695,7 @@ export namespace Prisma {
     duong_dan: string
     mo_ta?: string | null
     nguoi_dung_id: number
+    isDelete?: boolean | null
     binh_luan?: binh_luanUncheckedCreateNestedManyWithoutHinh_anhInput
     luu_anh?: luu_anhUncheckedCreateNestedManyWithoutHinh_anhInput
   }
@@ -5678,6 +5704,7 @@ export namespace Prisma {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     binh_luan?: binh_luanUpdateManyWithoutHinh_anhNestedInput
     nguoi_dung?: nguoi_dungUpdateOneRequiredWithoutHinh_anhNestedInput
     luu_anh?: luu_anhUpdateManyWithoutHinh_anhNestedInput
@@ -5689,6 +5716,7 @@ export namespace Prisma {
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
     nguoi_dung_id?: IntFieldUpdateOperationsInput | number
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     binh_luan?: binh_luanUncheckedUpdateManyWithoutHinh_anhNestedInput
     luu_anh?: luu_anhUncheckedUpdateManyWithoutHinh_anhNestedInput
   }
@@ -5699,12 +5727,14 @@ export namespace Prisma {
     duong_dan: string
     mo_ta?: string | null
     nguoi_dung_id: number
+    isDelete?: boolean | null
   }
 
   export type hinh_anhUpdateManyMutationInput = {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
 
   export type hinh_anhUncheckedUpdateManyInput = {
@@ -5713,6 +5743,7 @@ export namespace Prisma {
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
     nguoi_dung_id?: IntFieldUpdateOperationsInput | number
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
 
   export type luu_anhCreateInput = {
@@ -5984,6 +6015,11 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
+  export type BoolNullableFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
+    not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
+  }
+
   export type Binh_luanListRelationFilter = {
     every?: binh_luanWhereInput
     some?: binh_luanWhereInput
@@ -6016,6 +6052,7 @@ export namespace Prisma {
     duong_dan?: SortOrder
     mo_ta?: SortOrder
     nguoi_dung_id?: SortOrder
+    isDelete?: SortOrder
   }
 
   export type hinh_anhAvgOrderByAggregateInput = {
@@ -6029,6 +6066,7 @@ export namespace Prisma {
     duong_dan?: SortOrder
     mo_ta?: SortOrder
     nguoi_dung_id?: SortOrder
+    isDelete?: SortOrder
   }
 
   export type hinh_anhMinOrderByAggregateInput = {
@@ -6037,6 +6075,7 @@ export namespace Prisma {
     duong_dan?: SortOrder
     mo_ta?: SortOrder
     nguoi_dung_id?: SortOrder
+    isDelete?: SortOrder
   }
 
   export type hinh_anhSumOrderByAggregateInput = {
@@ -6060,6 +6099,14 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type BoolNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
+    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedBoolNullableFilter<$PrismaModel>
+    _max?: NestedBoolNullableFilter<$PrismaModel>
   }
 
   export type luu_anhNguoi_dung_idHinh_idCompoundUniqueInput = {
@@ -6255,6 +6302,10 @@ export namespace Prisma {
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
+  }
+
+  export type NullableBoolFieldUpdateOperationsInput = {
+    set?: boolean | null
   }
 
   export type binh_luanUpdateManyWithoutHinh_anhNestedInput = {
@@ -6605,6 +6656,11 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
+  export type NestedBoolNullableFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
+    not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
+  }
+
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -6621,6 +6677,14 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type NestedBoolNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
+    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedBoolNullableFilter<$PrismaModel>
+    _max?: NestedBoolNullableFilter<$PrismaModel>
   }
 
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -6680,6 +6744,7 @@ export namespace Prisma {
     ten_hinh: string
     duong_dan: string
     mo_ta?: string | null
+    isDelete?: boolean | null
     nguoi_dung: nguoi_dungCreateNestedOneWithoutHinh_anhInput
     luu_anh?: luu_anhCreateNestedManyWithoutHinh_anhInput
   }
@@ -6690,6 +6755,7 @@ export namespace Prisma {
     duong_dan: string
     mo_ta?: string | null
     nguoi_dung_id: number
+    isDelete?: boolean | null
     luu_anh?: luu_anhUncheckedCreateNestedManyWithoutHinh_anhInput
   }
 
@@ -6745,6 +6811,7 @@ export namespace Prisma {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     nguoi_dung?: nguoi_dungUpdateOneRequiredWithoutHinh_anhNestedInput
     luu_anh?: luu_anhUpdateManyWithoutHinh_anhNestedInput
   }
@@ -6755,6 +6822,7 @@ export namespace Prisma {
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
     nguoi_dung_id?: IntFieldUpdateOperationsInput | number
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     luu_anh?: luu_anhUncheckedUpdateManyWithoutHinh_anhNestedInput
   }
 
@@ -6941,6 +7009,7 @@ export namespace Prisma {
     ten_hinh: string
     duong_dan: string
     mo_ta?: string | null
+    isDelete?: boolean | null
     binh_luan?: binh_luanCreateNestedManyWithoutHinh_anhInput
     nguoi_dung: nguoi_dungCreateNestedOneWithoutHinh_anhInput
   }
@@ -6951,6 +7020,7 @@ export namespace Prisma {
     duong_dan: string
     mo_ta?: string | null
     nguoi_dung_id: number
+    isDelete?: boolean | null
     binh_luan?: binh_luanUncheckedCreateNestedManyWithoutHinh_anhInput
   }
 
@@ -7006,6 +7076,7 @@ export namespace Prisma {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     binh_luan?: binh_luanUpdateManyWithoutHinh_anhNestedInput
     nguoi_dung?: nguoi_dungUpdateOneRequiredWithoutHinh_anhNestedInput
   }
@@ -7016,6 +7087,7 @@ export namespace Prisma {
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
     nguoi_dung_id?: IntFieldUpdateOperationsInput | number
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     binh_luan?: binh_luanUncheckedUpdateManyWithoutHinh_anhNestedInput
   }
 
@@ -7046,6 +7118,7 @@ export namespace Prisma {
     ten_hinh: string
     duong_dan: string
     mo_ta?: string | null
+    isDelete?: boolean | null
     binh_luan?: binh_luanCreateNestedManyWithoutHinh_anhInput
     luu_anh?: luu_anhCreateNestedManyWithoutHinh_anhInput
   }
@@ -7055,6 +7128,7 @@ export namespace Prisma {
     ten_hinh: string
     duong_dan: string
     mo_ta?: string | null
+    isDelete?: boolean | null
     binh_luan?: binh_luanUncheckedCreateNestedManyWithoutHinh_anhInput
     luu_anh?: luu_anhUncheckedCreateNestedManyWithoutHinh_anhInput
   }
@@ -7130,6 +7204,7 @@ export namespace Prisma {
     duong_dan?: StringFilter<"hinh_anh"> | string
     mo_ta?: StringNullableFilter<"hinh_anh"> | string | null
     nguoi_dung_id?: IntFilter<"hinh_anh"> | number
+    isDelete?: BoolNullableFilter<"hinh_anh"> | boolean | null
   }
 
   export type luu_anhUpsertWithWhereUniqueWithoutNguoi_dungInput = {
@@ -7207,6 +7282,7 @@ export namespace Prisma {
     ten_hinh: string
     duong_dan: string
     mo_ta?: string | null
+    isDelete?: boolean | null
   }
 
   export type luu_anhCreateManyNguoi_dungInput = {
@@ -7238,6 +7314,7 @@ export namespace Prisma {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     binh_luan?: binh_luanUpdateManyWithoutHinh_anhNestedInput
     luu_anh?: luu_anhUpdateManyWithoutHinh_anhNestedInput
   }
@@ -7247,6 +7324,7 @@ export namespace Prisma {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
     binh_luan?: binh_luanUncheckedUpdateManyWithoutHinh_anhNestedInput
     luu_anh?: luu_anhUncheckedUpdateManyWithoutHinh_anhNestedInput
   }
@@ -7256,6 +7334,7 @@ export namespace Prisma {
     ten_hinh?: StringFieldUpdateOperationsInput | string
     duong_dan?: StringFieldUpdateOperationsInput | string
     mo_ta?: NullableStringFieldUpdateOperationsInput | string | null
+    isDelete?: NullableBoolFieldUpdateOperationsInput | boolean | null
   }
 
   export type luu_anhUpdateWithoutNguoi_dungInput = {

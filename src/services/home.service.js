@@ -30,6 +30,7 @@ export const homeService = {
                 ten_hinh: {
                     contains: ten_hinh,
                 },
+                isDelete: false,
             },
         });
         return results;

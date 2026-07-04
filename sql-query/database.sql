@@ -40,3 +40,6 @@ CREATE TABLE luu_anh (
     FOREIGN KEY (hinh_id)
         REFERENCES hinh_anh(hinh_id)
 )
+
+ALTER TABLE hinh_anh
+ADD COLUMN isDelete BOOLEAN DEFAULT FALSE;

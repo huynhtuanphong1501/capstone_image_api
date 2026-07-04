@@ -7,6 +7,6 @@ const imgManageRouter = express.Router();
 imgManageRouter.get('/', authCookie, imgManageController.getInfo);
 imgManageRouter.get('/saved/:id', authCookie, imgManageController.getSavedImgById);
 imgManageRouter.get('/created/:id', authCookie, imgManageController.getCreateImgById);
-imgManageRouter.delete('/images/:id', authCookie, imgManageController.deleteImgByImgId);
+imgManageRouter.put('/images/:id', authCookie, imgManageController.deleteImgByImgId);
 
 export default imgManageRouter;

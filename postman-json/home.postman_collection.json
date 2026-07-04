@@ -1,0 +1,35 @@
+{
+  "info": {
+    "_postman_id": "32d7f762-63b2-4bc2-adfd-376b6ce96c2a",
+    "name": "home",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52966644"
+  },
+  "item": [
+    {
+      "name": "findByName",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "findAll",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}home/",
+          "host": [
+            "{{domain}}home"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

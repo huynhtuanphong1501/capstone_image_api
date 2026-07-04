@@ -1,0 +1,62 @@
+{
+  "info": {
+    "_postman_id": "3359b8e3-1834-4016-bbe9-395e8b41d400",
+    "name": "Auth page",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52966644"
+  },
+  "item": [
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test5@gmail.com\",\r\n    \"password\": \"Phong@12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}auth/login",
+          "host": [
+            "{{domain}}auth"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"fullName\": \"phonghuynh\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}auth/register",
+          "host": [
+            "{{domain}}auth"
+          ],
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

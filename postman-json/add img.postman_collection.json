@@ -1,0 +1,37 @@
+{
+  "info": {
+    "_postman_id": "26ae55aa-71a0-4a0c-9ecd-514a1b4df967",
+    "name": "add img",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52966644"
+  },
+  "item": [
+    {
+      "name": "themAnhCloud",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0M0BnbWFpbC5jb20iLCJpYXQiOjE3Nzk5Njk0NjUsImV4cCI6MTc3OTk3MzA2NX0.i5mgAbZKizQeM12o_mjzTTxRFRAMtM9JXZm5r45bNQM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}user/avatar-cloud",
+          "host": [
+            "{{domain}}user"
+          ],
+          "path": [
+            "avatar-cloud"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

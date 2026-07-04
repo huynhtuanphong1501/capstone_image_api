@@ -1,0 +1,61 @@
+{
+  "info": {
+    "_postman_id": "e5c8c1df-2b56-4f94-858c-ef1fd66ea6cf",
+    "name": "detail-page",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52966644"
+  },
+  "item": [
+    {
+      "name": "detail by id",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "commentId",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "checksave",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "binhluananh",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"noi_dung\": \"ok test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}detail/comments/3",
+          "host": [
+            "{{domain}}detail"
+          ],
+          "path": [
+            "comments",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

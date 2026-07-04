@@ -133,7 +133,8 @@ exports.Prisma.Hinh_anhScalarFieldEnum = {
   ten_hinh: 'ten_hinh',
   duong_dan: 'duong_dan',
   mo_ta: 'mo_ta',
-  nguoi_dung_id: 'nguoi_dung_id'
+  nguoi_dung_id: 'nguoi_dung_id',
+  isDelete: 'isDelete'
 };
 
 exports.Prisma.Luu_anhScalarFieldEnum = {
