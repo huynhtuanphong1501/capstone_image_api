@@ -1,0 +1,39 @@
+{
+  "name": "capstone_image_api",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/huynhtuanphong1501/capstone_image_api#readme",
+  "bugs": {
+    "url": "https://github.com/huynhtuanphong1501/capstone_image_api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhtuanphong1501/capstone_image_api.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "prisma": "npx prisma db pull && npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/adapter-mariadb": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.2.0",
+    "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "prisma": "^7.8.0"
+  }
+}
